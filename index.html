@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        body {
+            text-decoration: none;
+            font-size: 20px;
+            font-family: 'Oswald', sans-serif;
+            background: linear-gradient(90deg, rgb(135, 152, 207) 0%, rgb(255, 0, 200) 100%);
+            margin: 10px 5px;
+            border: 15px solid rgb(241, 152, 88);
+            border-radius: 10px;
+            padding: 0px 0px;
+            box-shadow: 2px 2px 4px ghostwhite, -2px -2px 4px ghostwhite;
+
+        }
+        body div{
+            box-shadow: 4px 4px 8px blue;
+            /* border: 2px solid black; */
+        }
+
+        #div1{
+            box-shadow: 4px 4px 8px blue, 2px -2px 4px blue;
+        }
+
+        h1 {
+            padding: 5px 10px;
+            display: inline-block;
+            text-decoration: none;
+            font-size: 50px;
+            font-weight: bold;
+            font-family: 'Oswald', sans-serif;
+            color: hsl(0, 100%, 50%);
+            text-shadow: 2px 2px 3px rgb(226, 87, 226), 4px 4px 10px ghostwhite;
+            outline-style: outset;
+            outline: thick ridge pink;
+            border: 10px solid black;
+        }
+
+        h1:hover {
+            transform: rotatex(270deg);
+            cursor: cell;
+        }
+
+        .main {
+            padding-left: 30px;
+            color: white;
+            text-shadow: 2px 2px 4px rgb(255, 21, 255);
+        }
+
+        .input {
+            border-radius: 30px 0px;
+            width: 400px;
+            height: 20px;
+            box-shadow: 2px 2px 40px rgb(132, 0, 255);
+            margin-top: 1px;
+        }
+
+        .input:hover {
+            background-color: rgb(250, 222, 170);
+        }
+
+        #submit {
+            margin-left: 500px;
+            height: 38px;
+            width: 76px;
+            border-radius: 10px;
+        }
+
+        #submit:hover {
+            color: black;
+            background-color: orange;
+            height: 40px;
+            width: 80px;
+            font-weight: bolder;
+            font-size: 0.7em;
+        }
+
+        @media screen and (max-width: 400px) and (max-height: 600px) {
+            #baby {
+                background-size: auto;
+                background: linear-gradient(45deg lime 0%, cyan 100%);
+            }
+
+            .input {
+                width: max-content;
+            }
+
+            #NEW {
+                color: white;
+                display: block;
+            }
+
+            #GIRLFRIEND {
+                color: yellow;
+                display: block;
+            }
+
+            #NEEDED {
+                color: green;
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body id="baby">
+    <div id="div1">
+        <h1><span id="NEW">NEW </span><span id="GIRLFRIEND">GIRLFRIEND </span><span id="NEEDED">NEEDED</span></h1>
+        <form action="girlfriend_bharti.html" method="post">
+            <table class="main">
+                <tr class="main">
+                    <td>
+                        <a>NAME</a>
+                    </td>
+                    <td>
+                        <input type="text" class="input"><br>
+                    </td>
+                </tr>
+                <tr class="main">
+                    <td><a>ADDRESS</a></td>
+                    <td><input type="text" class="input"></td>
+                </tr>
+                <tr class="main">
+                    <td><a>Phone NO.</a></td>
+                    <td><input type="tel" class="input"></td>
+                </tr>
+                <tr class="main">
+                    <td><a>Email Id:</a></td>
+                    <td><input type="email" class="input"></td>
+                </tr>
+                <tr class="main">
+                    <td><a>Instagram Id:</a></td>
+                    <td><input type="text" class="input"></td>
+                </tr>
+                <tr class="main">
+                    <td><a>Snap-Score:</a></td>
+                    <td><input type="number" class="input"></td>
+                </tr>
+                <tr class="main">
+                    <td><a>Reeler:</a></td>
+                    <td><input type="checkbox" value="checkbox"></td>
+                </tr>
+            </table>
+
+            <h3 class="main">*Qulification:</h3>
+            <div class="main">
+                <table>
+                    <tr>
+                        <td><a>Height:</a></td>
+                        <td><input type="number" value="height" class="input"></td>
+                        <td><a>(in cm)</a></td>
+                    </tr>
+                    <tr>
+                        <td><a>weight</a></td>
+                        <td><input type="number" value="weight" class="input"></td>
+                        <td>(in Kg)</td>
+                    </tr>
+                    <tr>
+                        <td><a>Age :</a></td>
+                        <td> <input type="number" value="age" class="input"></td>
+                        <td>(Real age)</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="main">
+                <h3>*List of Boyfriends(if more than 2 then you are not applicable):<input type="number"
+                        value="bf_number" class="input" style="width: auto; border-radius: 5px 5px;"></h3><br>
+            </div>
+            <div class="main">
+                <table>
+                    <tr>
+                        <a>1. Father's and brother's N.O.C Proof</a><br>
+                        <input type="file" value="fbN.O.C" class="input" id="N.O.C" class="file"
+                            onchange="Filevalidation()" class="files"><br>
+                    </tr>
+                    <tr>
+                        <a>2. Father's annual Income and property</a><br>
+                        <input type="file" value="FAIP" class="input" id="Income" class="file"
+                            onchange="Filevalidation()" class="files"><br>
+                    </tr>
+                    <tr>
+                        <a>3. Monthly pocket money</a><br>
+                        <input type="file" value="MPM" class="input" id="pocket_money" class="file"
+                            onchange="Filevalidation()" class="files"><br>
+                    </tr>
+                    <td>
+                        <a>4. Monthly food expenses</a><br>
+                        <input type="file" value="MFE" class="input" id="food_expance" class="file"
+                            onchange="Filevalidation()" class="files"><br>
+                    </td>
+                </table>
+            </div>
+            <div>
+                <input type="submit" id="submit" value="submit">
+            </div>
+        </form>
+    </div>
+    <?php
+    
+    ?>
+    <script>
+        Filevalidation = () => {
+            const fi = document.getElementsByClassName(file);
+            if (fi.file.size == 0) {
+                alert("add files");
+            }
+        }
+    </script>
+</body>
+
+</html>
